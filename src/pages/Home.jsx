@@ -1,30 +1,33 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {
-  FaLaptopCode,
-  FaMobileAlt,
-  FaCheckCircle,
-  FaQuoteLeft,
-} from "react-icons/fa";
+import { FaLaptopCode, FaMobileAlt, FaCheckCircle } from "react-icons/fa";
 
 const Home = () => {
   return (
-    <div className="bg-gray-900 text-white min-h-screen">
-      {/* Hero Section */}
-      <section className="max-w-7xl mx-auto px-6 py-24 text-center">
-        <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6 tracking-tight">
-          Empower Your Business <br /> with Cutting-Edge Digital Solutions
-        </h1>
-        <p className="text-lg md:text-xl max-w-3xl mx-auto text-gray-300 mb-10">
-          At Luma Technologies, we transform your ideas into powerful websites
-          and mobile apps that scale and perform flawlessly.
-        </p>
-        <Link
-          to="/services"
-          className="inline-block bg-cyan-500 hover:bg-cyan-600 text-white font-semibold px-8 py-4 rounded-lg shadow-lg transition"
-        >
-          Explore Our Services
-        </Link>
+    <div className="bg-gray-900 text-white min-h-screen overflow-x-hidden">
+      {/* Hero Section with Background Image */}
+      <section
+        className="relative bg-cover bg-center bg-no-repeat py-32 px-6 text-center"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1470&q=80')",
+        }}
+      >
+        <div className=" bg-opacity-60 max-w-4xl mx-auto p-10 rounded-lg">
+          <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6 tracking-tight">
+            Empower Your Business <br /> with Cutting-Edge Digital Solutions
+          </h1>
+          <p className="text-lg md:text-xl max-w-3xl mx-auto text-gray-300 mb-10">
+            At Luma Technologies, we transform your ideas into powerful websites
+            and mobile apps that scale and perform flawlessly.
+          </p>
+          <Link
+            to="/services"
+            className="inline-block bg-cyan-500 hover:bg-cyan-600 text-white font-semibold px-8 py-4 rounded-lg shadow-lg transition"
+          >
+            Explore Our Services
+          </Link>
+        </div>
       </section>
 
       {/* Services Section */}
@@ -111,51 +114,29 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="bg-gray-800 py-20 px-6">
-        <h2 className="text-4xl font-extrabold mb-12 text-center text-white">
-          What Our Clients Say
-        </h2>
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 text-gray-300">
-          <blockquote className="bg-gray-900 rounded-lg p-8 shadow-lg relative">
-            <FaQuoteLeft className="absolute top-6 left-6 text-cyan-500 text-3xl" />
-            <p className="mb-4 italic">
-              “Luma Technologies exceeded our expectations — the website they
-              built transformed our online presence. Highly recommended!”
-            </p>
-            <footer className="font-semibold text-cyan-400">
-              — Jane Smith, CEO, TechCorp
-            </footer>
-          </blockquote>
-
-          <blockquote className="bg-gray-900 rounded-lg p-8 shadow-lg relative">
-            <FaQuoteLeft className="absolute top-6 left-6 text-cyan-500 text-3xl" />
-            <p className="mb-4 italic">
-              “The mobile app developed by Luma was a game changer for our
-              business. Professional, timely, and creative team!”
-            </p>
-            <footer className="font-semibold text-cyan-400">
-              — John Doe, Founder, AppWorks
-            </footer>
-          </blockquote>
+      {/* Call to Action Section with Background Image */}
+      <section
+        className="relative bg-cover bg-center bg-no-repeat py-24 px-6 text-center"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1470&q=80')",
+        }}
+      >
+        <div className=" bg-opacity-70 max-w-3xl mx-auto p-12 rounded-lg">
+          <h2 className="text-4xl font-extrabold mb-6">
+            Ready to Elevate Your Digital Presence?
+          </h2>
+          <p className="text-gray-300 max-w-xl mx-auto mb-10">
+            Contact us today for a free consultation and let’s build something
+            amazing together.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-block bg-cyan-500 hover:bg-cyan-600 text-white font-semibold px-10 py-4 rounded-lg shadow-lg transition"
+          >
+            Get in Touch
+          </Link>
         </div>
-      </section>
-
-      {/* Call to Action */}
-      <section className="py-20 px-6 text-center">
-        <h2 className="text-4xl font-extrabold mb-6">
-          Ready to Elevate Your Digital Presence?
-        </h2>
-        <p className="text-gray-400 max-w-xl mx-auto mb-10">
-          Contact us today for a free consultation and let’s build something
-          amazing together.
-        </p>
-        <Link
-          to="/contact"
-          className="inline-block bg-cyan-500 hover:bg-cyan-600 text-white font-semibold px-10 py-4 rounded-lg shadow-lg transition"
-        >
-          Get in Touch
-        </Link>
       </section>
     </div>
   );
